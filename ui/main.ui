@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>stock_list_widget</class>
+ <widget class="QMainWindow" name="stock_list_widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1110</width>
+    <height>804</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Binance 선물 자동매매 프로그램</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="9">
+     <widget class="QSpinBox" name="leverage_spin_box">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLabel" name="profit_rate_label">
+      <property name="text">
+       <string>수익률:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QLabel" name="label_coin_list">
+      <property name="text">
+       <string>코인 리스트</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="12" colspan="2">
+     <widget class="QPushButton" name="button_start">
+      <property name="text">
+       <string>시작</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="13">
+     <widget class="QLabel" name="label_report">
+      <property name="text">
+       <string>보고서</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="10" colspan="2">
+     <widget class="QComboBox" name="trading_strategy_combo_box">
+      <item>
+       <property name="text">
+        <string>RSI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MACD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Triple RSI</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QLabel" name="risk_reward_ratio_label">
+      <property name="text">
+       <string>손익비:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="label_code">
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>종목 코드</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QListWidget" name="coin_list"/>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="all_coin_button">
+        <property name="text">
+         <string>전체 코인</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="account_coin_button">
+        <property name="text">
+         <string>계좌 잔액</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" colspan="14">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="7" rowspan="4">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_search">
+      <property name="text">
+       <string>검색</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="8" colspan="4">
+     <widget class="QLabel" name="label_buysell">
+      <property name="text">
+       <string>매매현황</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="8">
+     <widget class="QLabel" name="label_leverage">
+      <property name="text">
+       <string>레버리지:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="12" colspan="2">
+     <widget class="QPushButton" name="button_stop">
+      <property name="text">
+       <string>중단</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3" rowspan="3" colspan="4">
+     <widget class="QTextBrowser" name="current_price_log"/>
+    </item>
+    <item row="3" column="12" rowspan="4">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="13" rowspan="3">
+     <widget class="QListWidget" name="report_list"/>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="label_account">
+      <property name="text">
+       <string>계좌 잔액: 0 USDT</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="search_coin_input"/>
+    </item>
+    <item row="1" column="6">
+     <widget class="QDoubleSpinBox" name="risk_reward_ratio_double_spin_box"/>
+    </item>
+    <item row="3" column="3" colspan="4">
+     <widget class="QLabel" name="label_current_price">
+      <property name="text">
+       <string>현재가</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QDoubleSpinBox" name="profit_rate_double_spin_box"/>
+    </item>
+    <item row="3" column="2" rowspan="4">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="8" rowspan="3" colspan="4">
+     <widget class="QTextBrowser" name="buysell_log"/>
+    </item>
+    <item row="0" column="3" colspan="9">
+     <widget class="QLineEdit" name="coin_input">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1110</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>메뉴</string>
+    </property>
+    <addaction name="action_binance_api"/>
+    <addaction name="separator"/>
+    <addaction name="action_backtesting"/>
+    <addaction name="separator"/>
+    <addaction name="actio_refresh"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_binance_api">
+   <property name="text">
+    <string>Binance Api 인증</string>
+   </property>
+  </action>
+  <action name="actio_refresh">
+   <property name="text">
+    <string>↻ 새로고침</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>❌ 프로그램 종료</string>
+   </property>
+  </action>
+  <action name="actiona">
+   <property name="text">
+    <string>aㄴㅇ</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>ㅁㄴㅇ</string>
+   </property>
+  </action>
+  <action name="action_coin_price">
+   <property name="text">
+    <string>코인 시세</string>
+   </property>
+  </action>
+  <action name="action_backtesting">
+   <property name="text">
+    <string>백테스팅</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
